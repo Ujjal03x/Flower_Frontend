@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Florist — Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --paper:#F5F6F1;
+      --ink:#16241A;
+      --ink-soft:rgba(22,36,26,0.62);
+      --accent:#E8432F;
+      --line:rgba(22,36,26,0.16);
+      --radius:2px;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:'Inter',sans-serif;
+      color:var(--ink);
+      background:linear-gradient(180deg, #FBF8F4 0%, #F5F6F1 100%);
+    }
+    a{color:inherit;text-decoration:none;}
+    .page-wrap{width:min(520px,calc(100% - 40px));padding:40px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 80px rgba(22,36,26,0.08);}
+    .page-header{margin-bottom:30px;}
+    .page-header h1{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(32px,4vw,42px);margin:0 0 10px;}
+    .page-header p{margin:0;color:var(--ink-soft);line-height:1.7;font-size:15px;}
+    .form-group{display:flex;flex-direction:column;gap:10px;margin-bottom:18px;}
+    label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);}
+    input{border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px;font-family:'Inter',sans-serif;color:var(--ink);background:#fff;}
+    input:focus{outline:2px solid var(--accent);outline-offset:2px;border-color:var(--accent);}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:10px;border:none;background:var(--ink);color:#fff;font-size:15px;font-weight:600;cursor:pointer;transition:transform .2s ease, background .2s ease;}
+    .btn:hover{background:var(--accent);transform:translateY(-1px);}
+    .footer-link{margin-top:20px;font-size:14px;color:var(--ink-soft);}
+    .footer-link a{color:var(--ink);font-weight:600;}
+    .footer-link a:hover{color:var(--accent);}
+  </style>
+</head>
+<body>
+  <main class="page-wrap">
+    <div class="page-header">
+      <h1>Log in</h1>
+      <p>Access the Sweet Florist dashboard, orders, and account settings.</p>
+    </div>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn">Log in</button>
+    </form>
+    <p class="footer-link">Need a different page? <a href="index.html">Return home</a></p>
+  </main>
+</body>
+</html>
